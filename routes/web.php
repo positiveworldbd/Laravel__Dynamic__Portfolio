@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 // DemoController
 Route::controller(DemoController::class)->group(function(){
-    Route::get('/about', 'Index')->name('about.page');
+    Route::get('/about', 'Index')->name('about.page')->middleware('check');
     Route::get('/blog', 'blogMethod')->name('blog.page');
     Route::get('/contact', 'contactMethod')->name('contact.page');
 });
