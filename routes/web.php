@@ -10,12 +10,11 @@ Route::get('/', function () {
 
 
 
-// Group Controller
-
+// DemoController
 Route::controller(DemoController::class)->group(function(){
-    Route::get('/about', 'Index');
-    Route::get('/contact', 'contactMethod');
-    Route::get('/blog', 'blogMethod');
+    Route::get('/about', 'Index')->name('about.page');
+    Route::get('/blog', 'blogMethod')->name('blog.page');
+    Route::get('/contact', 'contactMethod')->name('contact.page');
 });
 
 
