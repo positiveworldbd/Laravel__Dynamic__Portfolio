@@ -17,7 +17,7 @@ use App\Http\Controllers\Demo\DemoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
 
 // Demo Controll
